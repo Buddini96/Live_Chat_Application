@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="399.0" style="-fx-background-color: #fac6a5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="63.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="276.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/images/Vector4.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblName" layoutX="71.0" layoutY="10.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="37.0" text="Active">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Circle fill="#0f7510" layoutX="114.0" layoutY="46.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#026c7b" layoutX="40.0" layoutY="32.0" radius="20.0" stroke="#f8f4f4" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="312.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/images/Vector3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="8.0" fitWidth="22.0" layoutX="355.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/images/aa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="10.0" layoutY="66.0" opacity="0.8" prefHeight="464.0" prefWidth="379.0">
+         <content>
+            <VBox fx:id="vboxChat" prefHeight="456.0" prefWidth="371.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></VBox>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="txtTyping" layoutX="14.0" layoutY="539.0" prefHeight="47.0" prefWidth="321.0" promptText="Type a message here..." style="-fx-background-radius: 90; -fx-border-color: #EFEEEE; -fx-background-color: #e5dbff;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></TextField>
+      <Circle fill="#026c7b" layoutX="369.0" layoutY="562.0" radius="20.0" stroke="#f8f4f4" strokeType="INSIDE" strokeWidth="0.0" />
+      <JFXButton layoutX="349.0" layoutY="547.0" onAction="#sendOnAction" prefHeight="31.0" prefWidth="22.0" textFill="#026c7b">
+         <graphic>
+            <FontAwesomeIcon fill="#f5efef" glyphName="SEND" size="18" />
+         </graphic></JFXButton>
+      <JFXButton layoutX="283.0" layoutY="546.0" onAction="#photoSendOnAction" prefHeight="33.0" prefWidth="52.0" textFill="#f3f5f5">
+         <graphic>
+            <FontAwesomeIcon fill="#026c7b" glyphName="CAMERA" size="23" wrappingWidth="17.000001668930054" />
+         </graphic></JFXButton>
+   </children>
+</AnchorPane>

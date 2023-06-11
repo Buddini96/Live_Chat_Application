@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="400.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane prefHeight="604.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="789.0" fitWidth="400.0" layoutX="-1.0" layoutY="-185.0" pickOnBounds="true" preserveRatio="true" x="1.0">
+               <image>
+                  <Image url="@../assests/images/bg0.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="78.0" layoutY="167.0" opacity="0.75" prefHeight="315.0" prefWidth="261.0" style="-fx-background-color: #fde5c8; -fx-background-radius: 20;">
+               <children>
+                  <TextField fx:id="txtUserName" layoutX="61.0" layoutY="158.0" prefHeight="30.0" prefWidth="167.0" promptText="User Name" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton layoutX="83.0" layoutY="221.0" onAction="#loginOnAction" prefHeight="31.0" prefWidth="94.0" style="-fx-background-color: #225231; -fx-background-radius: 30;" text="Login" textFill="#eee7e7">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIcon fill="#2c2929" glyphName="USER" layoutX="24.0" layoutY="184.0" size="30" wrappingWidth="24.571428298950195" />
+                  <Text layoutX="32.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Application">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="40.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ! Please Login in to continue" wrappingWidth="179.9726586341858" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
