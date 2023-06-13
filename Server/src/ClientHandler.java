@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class ClientHandler extends Thread{
+public class  ClientHandler extends Thread{
     private ArrayList<ClientHandler> clients;
     private Socket socket;
     private BufferedReader reader;

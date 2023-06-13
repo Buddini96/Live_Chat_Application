@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
@@ -54,16 +55,26 @@
                </opaqueInsets></VBox>
          </content>
       </ScrollPane>
-      <TextField fx:id="txtTyping" layoutX="14.0" layoutY="539.0" prefHeight="47.0" prefWidth="321.0" promptText="Type a message here..." style="-fx-background-radius: 90; -fx-border-color: #EFEEEE; -fx-background-color: #e5dbff;">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font></TextField>
       <Circle fill="#026c7b" layoutX="369.0" layoutY="562.0" radius="20.0" stroke="#f8f4f4" strokeType="INSIDE" strokeWidth="0.0" />
+      <Pane layoutX="11.0" layoutY="539.0" prefHeight="47.0" prefWidth="98.0" style="-fx-background-radius: 90; -fx-background-color: #e5dbff;">
+         <children>
+            <TextField fx:id="txtTyping" layoutX="43.0" prefHeight="47.0" prefWidth="275.0" promptText="Type a message here..." style="-fx-background-radius: 90; -fx-background-color: #e5dbff;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <JFXButton layoutY="4.0" onAction="#emogiOnActon" prefHeight="40.0" prefWidth="52.0" textFill="#e5dbff">
+               <graphic>
+                  <FontAwesomeIcon fill="#026c7b" glyphName="SMILE_ALT" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
       <JFXButton layoutX="349.0" layoutY="547.0" onAction="#sendOnAction" prefHeight="31.0" prefWidth="22.0" textFill="#026c7b">
          <graphic>
             <FontAwesomeIcon fill="#f5efef" glyphName="SEND" size="18" />
          </graphic></JFXButton>
-      <JFXButton layoutX="283.0" layoutY="546.0" onAction="#photoSendOnAction" prefHeight="33.0" prefWidth="52.0" textFill="#f3f5f5">
+      <JFXButton layoutX="283.0" layoutY="546.0" onAction="#photoSendOnAction" prefHeight="33.0" prefWidth="52.0" textFill="#e5dbff">
          <graphic>
             <FontAwesomeIcon fill="#026c7b" glyphName="CAMERA" size="23" wrappingWidth="17.000001668930054" />
          </graphic></JFXButton>

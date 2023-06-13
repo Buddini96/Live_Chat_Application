@@ -10,7 +10,7 @@ public class Server {
         ServerSocket serverSocket;
         Socket socket;
         try {
-            serverSocket = new ServerSocket(3000);
+            serverSocket = new ServerSocket(3000);//client req ekk enkn listining krn innwa
             while(true) {
                 System.out.println("Waiting for clients...");
                 socket = serverSocket.accept();/*'listen incoming client connection and accept them '*/

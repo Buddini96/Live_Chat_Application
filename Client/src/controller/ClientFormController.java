@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.Charset;
 
 public class ClientFormController extends Thread{
     public VBox vboxChat;
@@ -158,4 +159,12 @@ public class ClientFormController extends Thread{
         writer.flush();
     }
 
+    public void emogiOnActon(ActionEvent actionEvent) {
+        byte[] emojiByteCode = new byte[]{(byte)0xF0,(byte)0x9F, (byte)0x98, (byte)0x81};
+        String emoji = new String(emojiByteCode, Charset.forName("UTF-8"));
+        txtTyping.appendText("\uD83D\uDE07");
+        txtTyping.appendText("\uD83E\uDD2D");
+        txtTyping.appendText("\uD83D\uDE34");
+        txtTyping.setText(txtTyping.getText() + " "+ emoji);
+    }
 }
